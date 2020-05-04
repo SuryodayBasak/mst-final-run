@@ -1,0 +1,758 @@
+xx,knn, 3 , 45.797601772240675
+xx,knn, 5 , 39.2069375626578
+xx,knn, 7 , 37.96414595030173
+xx,knn, 9 , 37.144003511956036
+xx,knn, 11 , 36.959670452348924
+xx,knn, 13 , 35.58250962598046
+xx,knn, 15 , 36.007326367766694
+xx,dknn, 3 , 47.4468588520587
+xx,dknn, 5 , 42.65258261347517
+xx,dknn, 7 , 41.244825442981195
+xx,dknn, 9 , 40.35870080028711
+xx,dknn, 11 , 39.466380853071456
+xx,dknn, 13 , 38.69312341209992
+xx,dknn, 15 , 38.257301094721086
+pca,knn, 3 , 47.02627681284606
+pca,knn, 5 , 40.24080351641195
+pca,knn, 7 , 38.71091948552445
+pca,knn, 9 , 37.71911635228252
+pca,knn, 11 , 38.065510584360666
+pca,knn, 13 , 36.75009262212742
+pca,knn, 15 , 36.70957632719084
+pca,dknn, 3 , 49.32792408720231
+pca,dknn, 5 , 44.4281297214104
+pca,dknn, 7 , 43.001111825438905
+pca,dknn, 9 , 41.98539990715207
+pca,dknn, 11 , 41.11164983566238
+pca,dknn, 13 , 40.29442619753854
+pca,dknn, 15 , 39.840421028777456
+ga,knn, 15 , 34.94116531348837
+ga,dknn, 15 , 32.954974102431514
+ga,knn, 9 , 32.426334429596835
+ga,dknn, 9 , 36.309411935279925
+ga,knn, 3 , 43.81428537836839
+ga,dknn, 3 , 45.37051101216373
+ga,knn, 11 , 33.326160043079554
+ga,dknn, 11 , 34.747313418314334
+ga,knn, 5 , 34.82685180664452
+ga,dknn, 5 , 39.28828580385463
+ga,knn, 7 , 33.624256145908205
+ga,dknn, 7 , 39.39213670991319
+ga,knn, 13 , 34.33766224130609
+ga,dknn, 13 , 35.78889957003802
+Process Process-14:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 42, in gbest_pso_run
+    neighbors = reg.find_all_neighbors(scaled_x_verif)
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38, in find_all_neighbors
+    nbrs_dist.append(LA.norm(x - self.X[i])) #Euclidean dist
+AttributeError: type object 'range' has no attribute 'norm'
+gbest-pso,knn, 9 , 16.70094520552889
+gbest-pso,dknn, 9 , 13.123919543245645
+gbest-pso,knn, 7 , 13.760127471014984
+gbest-pso,dknn, 7 , 11.753762037309404
+gbest-pso,knn, 13 , 22.77066387912088
+gbest-pso,dknn, 13 , 19.30477029973646
+gbest-pso,knn, 5 , 14.111567581926906
+gbest-pso,dknn, 5 , 11.132047074328085
+gbest-pso,knn, 11 , 30.534940642980693
+gbest-pso,dknn, 11 , 28.67368337662157
+lbest-pso,knn, 9 , 19.469192436938602
+lbest-pso,dknn, 9 , 15.964455828869902
+Fatal Python error: GC object already tracked
+
+Current thread 0x00007fcaa93fe740 (most recent call first):
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38 in find_all_neighbors
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 162 in lbest_pso_run
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93 in run
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258 in _bootstrap
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 73 in _launch
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19 in __init__
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 277 in _Popen
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 223 in _Popen
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 105 in start
+  File "master_process.py", line 130 in <module>
+lbest-pso,knn, 3 , 15.550032930232558
+lbest-pso,dknn, 3 , 14.231336987026557
+lbest-pso,knn, 13 , 22.963178423578203
+lbest-pso,dknn, 13 , 16.6803137017623
+lbest-pso,knn, 7 , 17.661250742830017
+lbest-pso,dknn, 7 , 14.975464205198637
+lbest-pso,knn, 5 , 13.541716576212622
+lbest-pso,dknn, 5 , 12.743823809956599
+lbest-pso,knn, 15 , 24.87455473805832
+lbest-pso,dknn, 15 , 17.39390798599012
+xx,knn, 3 , 42.798814964193426
+xx,knn, 5 , 39.300162097940195
+xx,knn, 7 , 39.00905164587429
+xx,knn, 9 , 38.7762624905459
+xx,knn, 11 , 38.239870942890086
+xx,knn, 13 , 37.596634019068574
+xx,knn, 15 , 36.56735469483941
+xx,dknn, 3 , 46.600385498575655
+xx,dknn, 5 , 42.86798666997151
+xx,dknn, 7 , 41.84534903497692
+xx,dknn, 9 , 41.038401940582226
+xx,dknn, 11 , 40.425742112719355
+xx,dknn, 13 , 39.864816560594136
+xx,dknn, 15 , 39.3705861489685
+pca,knn, 3 , 44.657095682539676
+pca,knn, 5 , 40.870302156810624
+pca,knn, 7 , 40.44145300237304
+pca,knn, 9 , 39.75851396981255
+pca,knn, 11 , 39.52518518978061
+pca,knn, 13 , 38.4849298936877
+pca,knn, 15 , 37.96448524691029
+pca,dknn, 3 , 48.877754871971135
+pca,dknn, 5 , 44.89928986640824
+pca,dknn, 7 , 43.759281008900544
+pca,dknn, 9 , 42.82237595907819
+pca,dknn, 11 , 42.171170220384134
+pca,dknn, 13 , 41.46336348212199
+pca,dknn, 15 , 41.0100903565027
+ga,knn, 11 , 33.92540416166496
+ga,dknn, 11 , 37.79612976211815
+ga,knn, 15 , 35.36174590328533
+ga,dknn, 15 , 39.15545806899912
+ga,knn, 5 , 33.77190135255813
+ga,dknn, 5 , 40.24103058768933
+ga,knn, 13 , 33.87528430692561
+ga,dknn, 13 , 38.68684301171148
+ga,knn, 9 , 33.79690529420448
+ga,dknn, 9 , 38.650076839766605
+ga,knn, 7 , 31.47591142023186
+ga,dknn, 7 , 37.54158526126505
+gbest-pso,knn, 9 , 17.349179608342556
+gbest-pso,dknn, 9 , 13.467101804417554
+gbest-pso,knn, 5 , 9.789593302458469
+gbest-pso,dknn, 5 , 6.764962637977126
+gbest-pso,knn, 11 , 16.895601046072315
+gbest-pso,dknn, 11 , 14.00701943377687
+gbest-pso,knn, 7 , 9.196184077496785
+gbest-pso,dknn, 7 , 6.139436191996415
+gbest-pso,knn, 15 , 20.618900051871545
+gbest-pso,dknn, 15 , 15.63677026292866
+gbest-pso,knn, 13 , 20.40683193699502
+gbest-pso,dknn, 13 , 15.942340880098307
+lbest-pso,knn, 7 , 14.89887590982439
+lbest-pso,dknn, 7 , 13.095395275900225
+lbest-pso,knn, 9 , 25.079456878552964
+lbest-pso,dknn, 9 , 23.00241152872601
+lbest-pso,knn, 13 , 27.84527265395427
+lbest-pso,dknn, 13 , 25.280912616371893
+lbest-pso,knn, 3 , 11.526159463639724
+lbest-pso,dknn, 3 , 10.069493911786688
+lbest-pso,knn, 15 , 23.75572789563677
+lbest-pso,dknn, 15 , 19.859580206371458
+lbest-pso,knn, 5 , 12.331962471096347
+lbest-pso,dknn, 5 , 11.351174672035931
+xx,knn, 3 , 38.31934545921005
+xx,knn, 5 , 33.48900965581396
+xx,knn, 7 , 30.467544426672998
+xx,knn, 9 , 30.229549159673528
+xx,knn, 11 , 29.88465874553142
+xx,knn, 13 , 29.730176019697655
+xx,knn, 15 , 29.650232875526026
+xx,dknn, 3 , 43.455761952135454
+xx,dknn, 5 , 40.358238711826814
+xx,dknn, 7 , 38.47311652416087
+xx,dknn, 9 , 37.72577096491378
+xx,dknn, 11 , 37.09705948570576
+xx,dknn, 13 , 36.50136642946052
+xx,dknn, 15 , 36.153057602362
+pca,knn, 3 , 40.66150068623109
+pca,knn, 5 , 35.11778325289037
+pca,knn, 7 , 31.904134817614764
+pca,knn, 9 , 31.310697987818394
+pca,knn, 11 , 31.238929935449335
+pca,knn, 13 , 30.627492545263316
+pca,knn, 15 , 29.943698551790327
+pca,dknn, 3 , 45.913626988705616
+pca,dknn, 5 , 42.81139280537685
+pca,dknn, 7 , 40.87500215607371
+pca,dknn, 9 , 39.968259768071036
+pca,dknn, 11 , 39.44144168444945
+pca,dknn, 13 , 38.89654992643186
+pca,dknn, 15 , 38.416353339714796
+ga,knn, 7 , 30.529995666485878
+ga,dknn, 7 , 33.789345493016114
+ga,knn, 5 , 31.533848463388694
+ga,dknn, 5 , 38.29300869400724
+ga,knn, 11 , 30.03171789198541
+ga,dknn, 11 , 37.85217020999537
+ga,knn, 3 , 36.58878159726837
+ga,dknn, 3 , 38.815380611708036
+ga,knn, 15 , 28.572456707877457
+ga,dknn, 15 , 34.14812595671477
+ga,knn, 13 , 29.441426149521323
+ga,dknn, 13 , 37.30619581485343
+gbest-pso,knn, 9 , 9.063841052581926
+gbest-pso,dknn, 9 , 6.084869608459623
+gbest-pso,knn, 3 , 8.575357623477293
+gbest-pso,dknn, 3 , 5.9017215540057775
+gbest-pso,knn, 11 , 15.253154481919772
+gbest-pso,dknn, 11 , 11.096438129919063
+gbest-pso,knn, 5 , 16.35002460544851
+gbest-pso,dknn, 5 , 12.206307422771493
+gbest-pso,knn, 13 , 16.808986323261717
+gbest-pso,dknn, 13 , 12.456845889520553
+gbest-pso,knn, 7 , 10.177994064682354
+gbest-pso,dknn, 7 , 5.9587594902954475
+gbest-pso,knn, 15 , 20.707833876795885
+gbest-pso,dknn, 15 , 14.27764799104827
+Fatal Python error: GC object already tracked
+
+Current thread 0x00007fcaa93fe740 (most recent call first):
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38 in find_all_neighbors
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 120 in lbest_pso_run
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93 in run
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258 in _bootstrap
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 73 in _launch
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19 in __init__
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 277 in _Popen
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 223 in _Popen
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 105 in start
+  File "master_process.py", line 130 in <module>
+lbest-pso,knn, 9 , 13.465232722037646
+lbest-pso,dknn, 9 , 12.065438007717548
+lbest-pso,knn, 5 , 16.806041134086378
+lbest-pso,dknn, 5 , 14.008868396223377
+lbest-pso,knn, 13 , 19.214304195128683
+lbest-pso,dknn, 13 , 14.159365027303435
+lbest-pso,knn, 15 , 21.742637783949803
+lbest-pso,dknn, 15 , 16.459148065867726
+lbest-pso,knn, 7 , 28.95643754654553
+lbest-pso,dknn, 7 , 17.741888199950793
+xx,knn, 3 , 44.93297268770764
+xx,knn, 5 , 37.397676236810625
+xx,knn, 7 , 36.034317552579836
+xx,knn, 9 , 35.056616789836355
+xx,knn, 11 , 34.63378801197112
+xx,knn, 13 , 34.346477161237694
+xx,knn, 15 , 32.89985763325213
+xx,dknn, 3 , 48.71307654886588
+xx,dknn, 5 , 44.666062114214846
+xx,dknn, 7 , 43.06649575929431
+xx,dknn, 9 , 41.70613147887687
+xx,dknn, 11 , 40.97878182757614
+xx,dknn, 13 , 40.43051773767874
+xx,dknn, 15 , 39.6118176524585
+pca,knn, 3 , 48.079643159099305
+pca,knn, 5 , 40.23246970299003
+pca,knn, 7 , 37.550000991931654
+pca,knn, 9 , 35.61166939145235
+pca,knn, 11 , 35.34116269797644
+pca,knn, 13 , 34.9436598252767
+pca,knn, 15 , 33.60687309303804
+pca,dknn, 3 , 51.38293194682947
+pca,dknn, 5 , 46.674863593739666
+pca,dknn, 7 , 44.499971797984244
+pca,dknn, 9 , 42.79635679601583
+pca,dknn, 11 , 42.146705302367515
+pca,dknn, 13 , 41.5776898519795
+pca,dknn, 15 , 40.78464235973681
+ga,knn, 11 , 32.6975831792098
+ga,dknn, 11 , 38.704631934861084
+ga,knn, 9 , 32.24719146601862
+ga,dknn, 9 , 37.592898721797674
+ga,knn, 7 , 31.809769506814007
+ga,dknn, 7 , 37.63622292456029
+ga,knn, 3 , 40.153482875599856
+ga,dknn, 3 , 45.10827828903704
+ga,knn, 15 , 32.66741911660392
+ga,dknn, 15 , 39.198404164795654
+ga,knn, 5 , 35.23750456571428
+ga,dknn, 5 , 42.546465554371856
+ga,knn, 13 , 32.101905601505834
+ga,dknn, 13 , 38.57146095109223
+gbest-pso,knn, 3 , 14.980224604282023
+gbest-pso,dknn, 3 , 13.249455819118163
+gbest-pso,knn, 5 , 13.395773553621257
+gbest-pso,dknn, 5 , 10.823172714078456
+gbest-pso,knn, 13 , 25.808341533822155
+gbest-pso,dknn, 13 , 23.6969562166799
+gbest-pso,knn, 11 , 19.30650840943411
+gbest-pso,dknn, 11 , 12.62086897573547
+gbest-pso,knn, 7 , 15.848008572784588
+gbest-pso,dknn, 7 , 10.944873843589708
+gbest-pso,knn, 15 , 26.126870263875965
+gbest-pso,dknn, 15 , 22.25848788266881
+gbest-pso,knn, 9 , 11.09974064767648
+gbest-pso,dknn, 9 , 7.4599473070491396
+lbest-pso,knn, 5 , 18.46410245754152
+lbest-pso,dknn, 5 , 14.304747746722574
+lbest-pso,knn, 11 , 25.273282183520493
+lbest-pso,dknn, 11 , 21.826609802575412
+lbest-pso,knn, 3 , 18.8102475957918
+lbest-pso,dknn, 3 , 13.576197575648994
+lbest-pso,knn, 7 , 9.274652505051197
+lbest-pso,dknn, 7 , 6.167088367775097
+lbest-pso,knn, 13 , 18.98158628121252
+lbest-pso,dknn, 13 , 13.707784858048145
+lbest-pso,knn, 15 , 27.98804691133257
+lbest-pso,dknn, 15 , 25.20430502881308
+lbest-pso,knn, 9 , 18.504229540913002
+lbest-pso,dknn, 9 , 12.421784237714434
+xx,knn, 3 , 37.79241705758583
+xx,knn, 5 , 33.74401624119602
+xx,knn, 7 , 35.740703668045285
+xx,knn, 9 , 34.381155168984044
+xx,knn, 11 , 34.80031407267784
+xx,knn, 13 , 34.61590106799818
+xx,knn, 15 , 34.0336890306386
+xx,dknn, 3 , 39.87788615207094
+xx,dknn, 5 , 37.15190292678689
+xx,dknn, 7 , 36.7032148032487
+xx,dknn, 9 , 35.681240735638596
+xx,dknn, 11 , 35.915791725708765
+xx,dknn, 13 , 35.56871340494801
+xx,dknn, 15 , 35.14887113026292
+pca,knn, 3 , 39.741323250276864
+pca,knn, 5 , 36.119227429103
+pca,knn, 7 , 36.93683212522883
+pca,knn, 9 , 35.53527559103401
+pca,knn, 11 , 36.14954953870019
+pca,knn, 13 , 35.32554076693073
+pca,knn, 15 , 34.70338796623108
+pca,dknn, 3 , 41.88041284852876
+pca,dknn, 5 , 38.95401556775526
+pca,dknn, 7 , 38.02399202577131
+pca,dknn, 9 , 37.00196754352503
+pca,dknn, 11 , 37.15620238201275
+pca,dknn, 13 , 36.6519845536977
+pca,dknn, 15 , 36.14114067801473
+ga,knn, 5 , 30.551843039069766
+ga,dknn, 5 , 33.56667747374361
+ga,knn, 9 , 31.023035056519433
+ga,dknn, 9 , 32.79887886510622
+ga,knn, 11 , 30.599787955108315
+ga,dknn, 11 , 32.48961160079731
+ga,knn, 13 , 31.258661321512097
+ga,dknn, 13 , 33.65325978339693
+ga,knn, 3 , 34.448585308970095
+ga,dknn, 3 , 37.31691593632717
+ga,knn, 7 , 31.176318659298925
+ga,dknn, 7 , 35.07409192890141
+ga,knn, 15 , 31.64022717799925
+ga,dknn, 15 , 33.55624513671975
+gbest-pso,knn, 9 , 19.108961691317017
+gbest-pso,dknn, 9 , 14.83401251431607
+munmap_chunk(): invalid pointer
+Fatal Python error: GC object already tracked
+
+Current thread 0x00007fcaa93fe740 (most recent call first):
+  File "/export/home/basak/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 2462 in norm
+  File "<__array_function__ internals>", line 6 in norm
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38 in find_all_neighbors
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 69 in gbest_pso_run
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93 in run
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258 in _bootstrap
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 73 in _launch
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19 in __init__
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 277 in _Popen
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 223 in _Popen
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 105 in start
+  File "master_process.py", line 108 in <module>
+gbest-pso,knn, 7 , 20.027843749677952
+gbest-pso,dknn, 7 , 12.045747383281704
+gbest-pso,knn, 3 , 11.456926024363243
+gbest-pso,dknn, 3 , 8.18348888184325
+gbest-pso,knn, 11 , 20.49500128856979
+gbest-pso,dknn, 11 , 15.557996401815812
+lbest-pso,knn, 9 , 14.299499631680389
+lbest-pso,dknn, 9 , 11.80469311953326
+lbest-pso,knn, 3 , 15.041495111849391
+lbest-pso,dknn, 3 , 11.92603882767598
+lbest-pso,knn, 13 , 24.55538083960764
+lbest-pso,dknn, 13 , 17.39686115123946
+lbest-pso,knn, 7 , 12.980871570343744
+lbest-pso,dknn, 7 , 10.852388599395008
+lbest-pso,knn, 11 , 22.995883851486774
+lbest-pso,dknn, 11 , 15.857897957799336
+lbest-pso,knn, 15 , 18.12855412909561
+lbest-pso,dknn, 15 , 14.819460757845793
+lbest-pso,knn, 5 , 15.205957575282387
+lbest-pso,dknn, 5 , 12.611527160276426
+xx,knn, 3 , 40.939757934293105
+xx,knn, 5 , 33.96793926724254
+xx,knn, 7 , 30.95685806197031
+xx,knn, 9 , 32.24488805258195
+xx,knn, 11 , 31.604699260179576
+xx,knn, 13 , 31.48475595331146
+xx,knn, 15 , 30.963420700095995
+xx,dknn, 3 , 44.920864534646405
+xx,dknn, 5 , 40.45084940439809
+xx,dknn, 7 , 38.648303531676056
+xx,dknn, 9 , 38.247310988793494
+xx,dknn, 11 , 37.52385862705166
+xx,dknn, 13 , 37.14041124690478
+xx,dknn, 15 , 36.471881660738255
+pca,knn, 3 , 45.662057870062746
+pca,knn, 5 , 38.25090739906978
+pca,knn, 7 , 33.14499844491153
+pca,knn, 9 , 33.55771090156271
+pca,knn, 11 , 32.577299547211794
+pca,knn, 13 , 32.20210946083077
+pca,knn, 15 , 31.46168890421559
+pca,dknn, 3 , 47.14406957134823
+pca,dknn, 5 , 43.38737963128501
+pca,dknn, 7 , 40.935608165578216
+pca,dknn, 9 , 40.02083981335742
+pca,dknn, 11 , 39.17015787557625
+pca,dknn, 13 , 38.750944958342515
+pca,dknn, 15 , 38.0119358718844
+ga,knn, 3 , 35.50995574750831
+ga,dknn, 3 , 40.16546667445371
+ga,knn, 5 , 30.426810285714293
+ga,dknn, 5 , 36.05874347024958
+ga,knn, 15 , 29.871983282894075
+ga,dknn, 15 , 33.198797727828236
+ga,knn, 7 , 29.045430685063398
+ga,dknn, 7 , 34.75556989957764
+ga,knn, 9 , 30.26033875628566
+ga,dknn, 9 , 36.784499637809496
+gbest-pso,knn, 7 , 9.702753111058382
+gbest-pso,dknn, 7 , 5.762928838972891
+gbest-pso,knn, 15 , 24.231157215430052
+gbest-pso,dknn, 15 , 21.479505965652923
+gbest-pso,knn, 3 , 14.330181833887051
+gbest-pso,dknn, 3 , 12.803822349366312
+gbest-pso,knn, 11 , 15.572596456549794
+gbest-pso,dknn, 11 , 11.394461242899691
+gbest-pso,knn, 13 , 16.921897458373483
+gbest-pso,dknn, 13 , 11.280422141256707
+gbest-pso,knn, 5 , 13.6606491601329
+gbest-pso,dknn, 5 , 12.879148499390052
+lbest-pso,knn, 7 , 19.13796873191402
+lbest-pso,dknn, 7 , 14.052724556209174
+lbest-pso,knn, 3 , 12.558661695090445
+lbest-pso,dknn, 3 , 10.380742763276496
+lbest-pso,knn, 11 , 14.900724952088085
+lbest-pso,dknn, 11 , 11.988839059616158
+lbest-pso,knn, 5 , 11.437228950431892
+lbest-pso,dknn, 5 , 9.79248230903849
+lbest-pso,knn, 9 , 14.523898267749475
+lbest-pso,dknn, 9 , 12.62792642549071
+lbest-pso,knn, 13 , 22.957360512591176
+lbest-pso,dknn, 13 , 20.86304339724225
+lbest-pso,knn, 15 , 21.897073545219637
+lbest-pso,dknn, 15 , 20.892083983482696
+xx,knn, 3 , 42.16562211369509
+xx,knn, 5 , 38.75749879481728
+xx,knn, 7 , 36.57208669686081
+xx,knn, 9 , 36.258394466100654
+xx,knn, 11 , 36.280061586502285
+xx,knn, 13 , 36.06812833961745
+xx,knn, 15 , 36.07374660014766
+xx,dknn, 3 , 43.67599371713356
+xx,dknn, 5 , 41.717571099123994
+xx,dknn, 7 , 40.5264094391143
+xx,dknn, 9 , 39.71438264469937
+xx,dknn, 11 , 39.135148342138926
+xx,dknn, 13 , 38.890760361200066
+xx,dknn, 15 , 38.572888216488764
+pca,knn, 3 , 43.80928417718716
+pca,knn, 5 , 40.90695242923589
+pca,knn, 7 , 37.88758608787036
+pca,knn, 9 , 36.969452907550966
+pca,knn, 11 , 37.30854183495784
+pca,knn, 13 , 37.07260948778234
+pca,knn, 15 , 37.234971686555916
+pca,dknn, 3 , 45.72036880392825
+pca,dknn, 5 , 43.65322405368645
+pca,dknn, 7 , 42.19294952723272
+pca,dknn, 9 , 41.22361212688941
+pca,dknn, 11 , 40.78569961251915
+pca,dknn, 13 , 40.400611464831584
+pca,dknn, 15 , 40.001208176929865
+ga,knn, 5 , 36.843651226312296
+ga,dknn, 5 , 38.979016193767855
+ga,knn, 11 , 33.79476267963538
+ga,dknn, 11 , 38.07893955495453
+ga,knn, 13 , 32.76718977290686
+ga,dknn, 13 , 37.0719743199944
+ga,knn, 9 , 33.94798134383332
+ga,dknn, 9 , 39.263927495789495
+ga,knn, 15 , 33.10811228426726
+ga,dknn, 15 , 38.13095091725385
+ga,knn, 3 , 42.029451443706165
+ga,dknn, 3 , 43.8179878737702
+ga,knn, 7 , 35.26475828829075
+ga,dknn, 7 , 38.33096404253977
+double free or corruption (out)
+Fatal Python error: GC object already tracked
+
+Current thread 0x00007fcaa93fe740 (most recent call first):
+  File "/export/home/basak/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 2462 in norm
+  File "<__array_function__ internals>", line 6 in norm
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38 in find_all_neighbors
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 69 in gbest_pso_run
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93 in run
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258 in _bootstrap
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 73 in _launch
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19 in __init__
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 277 in _Popen
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 223 in _Popen
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 105 in start
+  File "master_process.py", line 108 in <module>
+gbest-pso,knn, 3 , 14.221215377630127
+gbest-pso,dknn, 3 , 12.380438950540643
+gbest-pso,knn, 11 , 14.902855916257106
+gbest-pso,dknn, 11 , 9.341697013183419
+gbest-pso,knn, 7 , 9.759893485456647
+gbest-pso,dknn, 7 , 7.19994051861204
+gbest-pso,knn, 15 , 19.955009574278336
+gbest-pso,dknn, 15 , 12.136339071805658
+gbest-pso,knn, 9 , 31.06782504199991
+gbest-pso,dknn, 9 , 18.659692461409
+Process Process-143:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 162, in lbest_pso_run
+    neighbors = reg.find_all_neighbors(scaled_x_verif)
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38, in find_all_neighbors
+    nbrs_dist.append(LA.norm(x - self.X[i])) #Euclidean dist
+  File "<__array_function__ internals>", line 6, in norm
+  File "/export/home/basak/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 2472, in norm
+    x = x.ravel(order='K')
+TypeError: order not understood
+lbest-pso,knn, 13 , 23.170916387741073
+lbest-pso,dknn, 13 , 17.911597504423735
+lbest-pso,knn, 9 , 22.907509809072636
+lbest-pso,dknn, 9 , 20.51158435011447
+lbest-pso,knn, 3 , 21.951149586932438
+lbest-pso,dknn, 3 , 16.943151374335798
+lbest-pso,knn, 11 , 13.042088480711682
+lbest-pso,dknn, 11 , 8.574668767111012
+lbest-pso,knn, 5 , 17.2766433380731
+lbest-pso,dknn, 5 , 14.693935610838448
+lbest-pso,knn, 15 , 19.659532295459584
+lbest-pso,dknn, 15 , 15.6954044443437
+xx,knn, 3 , 43.81284623514212
+xx,knn, 5 , 40.59318353315614
+xx,knn, 7 , 37.41836585144756
+xx,knn, 9 , 36.25898926766745
+xx,knn, 11 , 34.597682625628075
+xx,knn, 13 , 35.351458630836085
+xx,knn, 15 , 35.315204947877454
+xx,dknn, 3 , 47.75844284992089
+xx,dknn, 5 , 45.11637653550236
+xx,dknn, 7 , 43.42099055204136
+xx,dknn, 9 , 42.44684512496087
+xx,dknn, 11 , 41.285819108126915
+xx,dknn, 13 , 41.412512142068735
+xx,dknn, 15 , 41.04364670173027
+pca,knn, 3 , 45.28661180140272
+pca,knn, 5 , 42.636129689036544
+pca,knn, 7 , 39.120379558953154
+pca,knn, 9 , 37.66869617037858
+pca,knn, 11 , 36.337083952417565
+pca,knn, 13 , 36.653830580078264
+pca,knn, 15 , 36.14855498750832
+pca,dknn, 3 , 49.41702303989884
+pca,dknn, 5 , 47.02309513114952
+pca,dknn, 7 , 45.23816132638911
+pca,dknn, 9 , 43.976100627815725
+pca,dknn, 11 , 43.00407714552933
+pca,dknn, 13 , 42.89445756575865
+pca,dknn, 15 , 42.46011178938242
+munmap_chunk(): invalid pointer
+ga,knn, 11 , 33.91162641635322
+ga,dknn, 11 , 38.7307309816713
+ga,knn, 13 , 33.41422254616763
+ga,dknn, 13 , 38.31980500704754
+ga,knn, 7 , 32.058912247881224
+ga,dknn, 7 , 37.73514780249723
+ga,knn, 9 , 32.70307498318365
+ga,dknn, 9 , 38.78743039480141
+ga,knn, 5 , 35.66791469009968
+ga,dknn, 5 , 40.18070581782993
+ga,knn, 15 , 34.47627680518272
+ga,dknn, 15 , 40.41971837687405
+gbest-pso,knn, 13 , 19.16670997080738
+gbest-pso,dknn, 13 , 14.181590781158246
+gbest-pso,knn, 9 , 16.22494266637955
+gbest-pso,dknn, 9 , 11.195422995475832
+gbest-pso,knn, 15 , 19.10730368809156
+gbest-pso,dknn, 15 , 14.178707455302238
+gbest-pso,knn, 3 , 13.660769426356582
+gbest-pso,dknn, 3 , 11.368411497011556
+gbest-pso,knn, 5 , 14.246724612093018
+gbest-pso,dknn, 5 , 11.575425332372882
+gbest-pso,knn, 7 , 14.971179572920196
+gbest-pso,dknn, 7 , 11.81886355496695
+Fatal Python error: GC object already tracked
+
+Current thread 0x00007fcaa93fe740 (most recent call first):
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38 in find_all_neighbors
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 162 in lbest_pso_run
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93 in run
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258 in _bootstrap
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 73 in _launch
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19 in __init__
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 277 in _Popen
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 223 in _Popen
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 105 in start
+  File "master_process.py", line 130 in <module>
+lbest-pso,knn, 9 , 17.463376097945115
+lbest-pso,dknn, 9 , 13.706177582405354
+lbest-pso,knn, 3 , 10.084805806201553
+lbest-pso,dknn, 3 , 7.291581019509608
+lbest-pso,knn, 15 , 28.312879107641216
+lbest-pso,dknn, 15 , 24.696822999925615
+lbest-pso,knn, 13 , 27.796557314022298
+lbest-pso,dknn, 13 , 26.10908790015019
+lbest-pso,knn, 7 , 23.13341155332566
+lbest-pso,dknn, 7 , 22.437826319413425
+lbest-pso,knn, 5 , 17.185682437475087
+lbest-pso,dknn, 5 , 12.222560520284155
+xx,knn, 3 , 38.326134998154295
+xx,knn, 5 , 34.81758748651165
+xx,knn, 7 , 34.08057848423623
+xx,knn, 9 , 34.53180427443501
+xx,knn, 11 , 33.07305272573516
+xx,knn, 13 , 32.64177660980165
+xx,knn, 15 , 32.15643056704319
+xx,dknn, 3 , 41.64823091055071
+xx,dknn, 5 , 38.0497057177376
+xx,dknn, 7 , 37.02807910832249
+xx,dknn, 9 , 36.229021240151155
+xx,dknn, 11 , 35.50905266541504
+xx,dknn, 13 , 35.18280873140306
+xx,dknn, 15 , 34.809349763868305
+pca,knn, 3 , 40.80816819010704
+pca,knn, 5 , 36.74523789873756
+pca,knn, 7 , 35.417220916943535
+pca,knn, 9 , 35.263491632172595
+pca,knn, 11 , 34.219133689162845
+pca,knn, 13 , 33.540523537282034
+pca,knn, 15 , 33.270372596707276
+pca,dknn, 3 , 44.57168482991834
+pca,dknn, 5 , 40.38106995854164
+pca,dknn, 7 , 38.80351442108913
+pca,dknn, 9 , 37.71009258722889
+pca,dknn, 11 , 37.067263667379315
+pca,dknn, 13 , 36.58702876926511
+pca,dknn, 15 , 36.210138909356964
+ga,knn, 13 , 30.16322989583046
+ga,dknn, 13 , 17.12701745605409
+ga,knn, 7 , 30.275607729540997
+ga,dknn, 7 , 33.08439290112165
+ga,knn, 5 , 31.553471925980084
+ga,dknn, 5 , 34.992988281378466
+ga,knn, 11 , 29.564231022679216
+ga,dknn, 11 , 14.63008670711387
+ga,knn, 9 , 29.903314805791396
+ga,dknn, 9 , 14.751570275254522
+ga,knn, 3 , 36.14396201734957
+ga,dknn, 3 , 39.3305604598984
+ga,knn, 15 , 31.092257473975643
+ga,dknn, 15 , 15.549266374047056
+munmap_chunk(): invalid pointer
+gbest-pso,knn, 9 , 19.01840366502604
+gbest-pso,dknn, 9 , 13.673248497983312
+gbest-pso,knn, 13 , 17.582319236725713
+gbest-pso,dknn, 13 , 11.47577749191093
+gbest-pso,knn, 7 , 15.102550656044466
+gbest-pso,dknn, 7 , 11.605471622623718
+gbest-pso,knn, 11 , 15.8698218039867
+gbest-pso,dknn, 11 , 12.463114241534045
+gbest-pso,knn, 5 , 15.475670414485053
+gbest-pso,dknn, 5 , 12.404247289538127
+gbest-pso,knn, 3 , 15.699222575858252
+gbest-pso,dknn, 3 , 13.158240666927687
+lbest-pso,knn, 9 , 16.69646080353554
+lbest-pso,dknn, 9 , 12.89623184261962
+lbest-pso,knn, 7 , 19.00325752288292
+lbest-pso,dknn, 7 , 15.163933148298202
+lbest-pso,knn, 15 , 20.884627011310435
+lbest-pso,dknn, 15 , 14.291857155955581
+lbest-pso,knn, 5 , 16.372494062325583
+lbest-pso,dknn, 5 , 12.979291800520075
+lbest-pso,knn, 11 , 18.69002640839076
+lbest-pso,dknn, 11 , 15.139246260696902
+lbest-pso,knn, 3 , 11.68394935289775
+lbest-pso,dknn, 3 , 9.351057972629144
+xx,knn, 3 , 36.91219989700996
+xx,knn, 5 , 35.81691274963455
+xx,knn, 7 , 34.76322775055937
+xx,knn, 9 , 34.851142226159716
+xx,knn, 11 , 35.27478788372093
+xx,knn, 13 , 34.51168652102459
+xx,knn, 15 , 35.52200970204503
+xx,dknn, 3 , 40.589079173595906
+xx,dknn, 5 , 38.59722417670103
+xx,dknn, 7 , 37.59330664361637
+xx,dknn, 9 , 37.31869606623391
+xx,dknn, 11 , 37.11705758660258
+xx,dknn, 13 , 36.56672116087283
+xx,dknn, 15 , 36.43974539775303
+pca,knn, 3 , 39.241316947212994
+pca,knn, 5 , 37.63541457182725
+pca,knn, 7 , 36.61753316597736
+pca,knn, 9 , 36.38575209511506
+pca,knn, 11 , 36.34136569352846
+pca,knn, 13 , 35.83767560838624
+pca,knn, 15 , 36.04120966394979
+pca,dknn, 3 , 43.63267138089414
+pca,dknn, 5 , 40.97145365021879
+pca,dknn, 7 , 39.67159273820153
+pca,dknn, 9 , 39.0290891330303
+pca,dknn, 11 , 38.73922111643567
+pca,dknn, 13 , 38.19142366212483
+pca,dknn, 15 , 37.87252576871448
+ga,knn, 7 , 30.796551086378734
+ga,dknn, 7 , 36.60332348963638
+ga,knn, 5 , 32.15706718803987
+ga,dknn, 5 , 38.27377964426427
+ga,knn, 9 , 31.12132382055697
+ga,dknn, 9 , 35.9786333648225
+ga,knn, 13 , 31.905780419469608
+ga,dknn, 13 , 34.091837380920815
+ga,knn, 3 , 35.76627445662605
+ga,dknn, 3 , 40.848760759423804
+ga,knn, 15 , 32.60359070361018
+ga,dknn, 15 , 34.60539266382113
+gbest-pso,knn, 7 , 14.066975038443287
+gbest-pso,dknn, 7 , 11.085984008445257
+gbest-pso,knn, 9 , 14.640519251220203
+gbest-pso,dknn, 9 , 11.152511891317095
+gbest-pso,knn, 11 , 19.693920228439644
+gbest-pso,dknn, 11 , 17.056705116692847
+gbest-pso,knn, 15 , 19.13678788457733
+gbest-pso,dknn, 15 , 12.034792964529812
+gbest-pso,knn, 5 , 14.10751567641196
+gbest-pso,dknn, 5 , 11.291225761629539
+lbest-pso,knn, 7 , 18.611325985897338
+lbest-pso,dknn, 7 , 11.382550364222663
+lbest-pso,knn, 11 , 15.960442548117843
+lbest-pso,dknn, 11 , 13.367991522229818
+Fatal Python error: GC object already tracked
+
+Current thread 0x00007fcaa93fe740 (most recent call first):
+  File "/export/home/basak/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 2462 in norm
+  File "<__array_function__ internals>", line 6 in norm
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38 in find_all_neighbors
+  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 162 in lbest_pso_run
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93 in run
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258 in _bootstrap
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 73 in _launch
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19 in __init__
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 277 in _Popen
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 223 in _Popen
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 105 in start
+  File "master_process.py", line 130 in <module>
+lbest-pso,knn, 9 , 13.310650508674781
+lbest-pso,dknn, 9 , 10.894219129368643
+lbest-pso,knn, 15 , 27.30826622179401
+lbest-pso,dknn, 15 , 29.24904880660144
+lbest-pso,knn, 3 , 9.711796944629016
+lbest-pso,dknn, 3 , 7.457320949815437
+That took 140486.50925517082 second
