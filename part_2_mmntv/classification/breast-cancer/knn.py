@@ -190,6 +190,14 @@ class DwKNNClassifier:
             entropies.append(ent)
         return(sum(entropies)/len(entropies))
 
+    def find_neighborhood_std(self, neighbors):
+        variances = []
+        for neighbor in neighbors:
+            y = [self.y[i] for i in neighbor]
+            var = np.var(y, ddof = 1)
+            variances.append(var)
+        return(np.sqrt(sum(variances)/len(variances)))
+
 """
 KNN classifier.
 """
@@ -252,3 +260,13 @@ class KNNClassifier:
 
             entropies.append(ent)
         return(sum(entropies)/len(entropies))
+
+    def find_neighborhood_std(self, neighbors):
+        variances = []
+        for neighbor in neighbors:
+            y = [self.y[i] for i in neighbor]
+            var = np.var(y, ddof = 1)
+            variances.append(var)
+        return(np.sqrt(sum(variances)/len(variances)))
+
+

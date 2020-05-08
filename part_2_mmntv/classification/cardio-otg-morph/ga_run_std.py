@@ -3,7 +3,7 @@ from knn import KNNClassifier, DwKNNClassifier
 from ga import GeneticAlgorithm
 from sklearn.metrics import accuracy_score as accuracy
 
-def ga_run(x_train, y_train, x_test, y_test, x_verif, y_verif, k):
+def ga_run_std(x_train, y_train, x_test, y_test, x_verif, y_verif, k):
     # Run GA to find best weights.
     N_init_pop = 50
     N_crossover = 50
@@ -22,10 +22,10 @@ def ga_run(x_train, y_train, x_test, y_test, x_verif, y_verif, k):
         # Scale verificaion data
         scaled_x_verif = np.multiply(x_verif, weight_pop[i])
 
-        # Regressor.
+        # Classifier.
         clf = KNNClassifier(scaled_x_train, y_train, k)
         neighbors = clf.find_all_neighbors(scaled_x_verif)
-        nbh_ent = clf.find_neighborhood_entropy(neighbors)
+        nbh_ent = clf.find_neighborhood_std(neighbors)
         metric_array[i] = nbh_ent
 
     # Update fitness in GA object.
@@ -53,10 +53,10 @@ def ga_run(x_train, y_train, x_test, y_test, x_verif, y_verif, k):
             # Scale verificaion data
             scaled_x_verif = np.multiply(x_verif, weight_pop[i])
         
-            # Regressor.
+            # Classifier.
             clf = KNNClassifier(scaled_x_train, y_train, k)
             neighbors = clf.find_all_neighbors(scaled_x_verif)
-            nbh_ent = clf.find_neighborhood_entropy(neighbors)
+            nbh_ent = clf.find_neighborhood_std(neighbors)
             metric_array[i] = nbh_ent
 
         # Update fitness in GA object
@@ -78,10 +78,10 @@ def ga_run(x_train, y_train, x_test, y_test, x_verif, y_verif, k):
     clf = KNNClassifier(np.multiply(x_train, best_weights), y_train, k)
     y_pred = clf.predict(np.multiply(x_test, best_weights))
     acc = accuracy(y_test, y_pred)
-    print("ga,knn,", k, ",", acc)
+    print("ga-std,knn,", k, ",", acc)
 
     # Print the results of KNN.
     clf = DwKNNClassifier(np.multiply(x_train, best_weights), y_train, k)
     y_pred = clf.predict(np.multiply(x_test, best_weights))
     mse_iter = accuracy(y_test, y_pred)
-    print("ga,dknn,", k,",", mse_iter)
+    print("ga-std,dknn,", k,",", mse_iter)

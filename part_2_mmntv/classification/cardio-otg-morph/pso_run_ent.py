@@ -4,7 +4,7 @@ from sklearn.metrics import accuracy_score as accuracy
 from pso import GBestPSO, LBestPSO
 
 
-def gbest_pso_run(x_train, y_train, x_test, y_test, x_verif, y_verif, k):
+def gbest_pso_run_ent(x_train, y_train, x_test, y_test, x_verif, y_verif, k):
     #Run PSO to find best weights
     N_init_pop = 50
 
@@ -86,16 +86,16 @@ def gbest_pso_run(x_train, y_train, x_test, y_test, x_verif, y_verif, k):
     clf = KNNClassifier(np.multiply(x_train, best_weights), y_train, k)
     y_pred = clf.predict(np.multiply(x_test, best_weights))
     mse_iter = accuracy(y_test, y_pred)
-    print("gbest-pso,knn,", k,",", mse_iter)
+    print("gbest-pso-ent,knn,", k,",", mse_iter)
 
     # Print the results of KNN.
     clf = DwKNNClassifier(np.multiply(x_train, best_weights), y_train, k)
     y_pred = clf.predict(np.multiply(x_test, best_weights))
     mse_iter = accuracy(y_test, y_pred)
-    print("gbest-pso,dknn,", k,",", mse_iter)
+    print("gbest-pso-ent,dknn,", k,",", mse_iter)
 
 
-def lbest_pso_run(x_train, y_train, x_test, y_test, x_verif, y_verif, k):
+def lbest_pso_run_ent(x_train, y_train, x_test, y_test, x_verif, y_verif, k):
     #Run PSO to find best weights
     N_init_pop = 50
 
@@ -177,11 +177,11 @@ def lbest_pso_run(x_train, y_train, x_test, y_test, x_verif, y_verif, k):
     clf = KNNClassifier(np.multiply(x_train, best_weights), y_train, k)
     y_pred = clf.predict(np.multiply(x_test, best_weights))
     mse_iter = accuracy(y_test, y_pred)
-    print("lbest-pso,knn,", k, ",", mse_iter)
+    print("lbest-pso-ent,knn,", k, ",", mse_iter)
 
     # Print the results of KNN.
     clf = DwKNNClassifier(np.multiply(x_train, best_weights), y_train, k)
     y_pred = clf.predict(np.multiply(x_test, best_weights))
     mse_iter = accuracy(y_test, y_pred)
-    print("lbest-pso,dknn,", k, ",", mse_iter)
+    print("lbest-pso-ent,dknn,", k, ",", mse_iter)
 

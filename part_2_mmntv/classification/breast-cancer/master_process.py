@@ -67,47 +67,93 @@ for i in range (0, 10):
                                                           y_train,\
                                                           test_size=0.33)
     """
-    GA-driven methods.
+    GA-driven methods with entropy.
     """
     # Use different values of k.
     for k in K_VALS:
         # Run the GA based optimization.
-        ga_run(x_train.copy(),\
-               y_train.copy(),\
-               x_test.copy(),\
-               y_test.copy(),\
-               x_verif.copy(),\
-               y_verif.copy(),\
-               k)
+        ga_run_ent(x_train.copy(),\
+                   y_train.copy(),\
+                   x_test.copy(),\
+                   y_test.copy(),\
+                   x_verif.copy(),\
+                   y_verif.copy(),\
+                   k)
 
 
     """
-    GBest_PSO-driven methods.
-    """
-    # Use different values of k.
-    for k in K_VALS:
-        # Run the GA based optimization.
-        gbest_pso_run(x_train.copy(),\
-                      y_train.copy(),\
-                      x_test.copy(),\
-                      y_test.copy(),\
-                      x_verif.copy(),\
-                      y_verif.copy(),\
-                      k)
-
-
-    """
-    LBest_PSO-driven methods.
+    GBest_PSO-driven methods with entropy.
     """
     # Use different values of k.
     for k in K_VALS:
         # Run the GA based optimization.
-        lbest_pso_run(x_train.copy(),\
-                      y_train.copy(),\
-                      x_test.copy(),\
-                      y_test.copy(),\
-                      x_verif.copy(),\
-                      y_verif.copy(),\
-                      k)
+        gbest_pso_run_ent(x_train.copy(),\
+                          y_train.copy(),\
+                          x_test.copy(),\
+                          y_test.copy(),\
+                          x_verif.copy(),\
+                          y_verif.copy(),\
+                          k)
+
+
+    """
+    LBest_PSO-driven methods with entropy.
+    """
+    # Use different values of k.
+    for k in K_VALS:
+        # Run the GA based optimization.
+        lbest_pso_run_ent(x_train.copy(),\
+                          y_train.copy(),\
+                          x_test.copy(),\
+                          y_test.copy(),\
+                          x_verif.copy(),\
+                          y_verif.copy(),\
+                          k)
+
+
+    """
+    GA-driven methods with std.
+    """
+    # Use different values of k.
+    for k in K_VALS:
+        # Run the GA based optimization.
+        ga_run_std(x_train.copy(),\
+                   y_train.copy(),\
+                   x_test.copy(),\
+                   y_test.copy(),\
+                   x_verif.copy(),\
+                   y_verif.copy(),\
+                   k)
+
+
+    """
+    GBest_PSO-driven methods with std.
+    """
+    # Use different values of k.
+    for k in K_VALS:
+        # Run the GA based optimization.
+        gbest_pso_run_std(x_train.copy(),\
+                          y_train.copy(),\
+                          x_test.copy(),\
+                          y_test.copy(),\
+                          x_verif.copy(),\
+                          y_verif.copy(),\
+                          k)
+
+
+    """
+    LBest_PSO-driven methods with std.
+    """
+    # Use different values of k.
+    for k in K_VALS:
+        # Run the GA based optimization.
+        lbest_pso_run_std(x_train.copy(),\
+                          y_train.copy(),\
+                          x_test.copy(),\
+                          y_test.copy(),\
+                          x_verif.copy(),\
+                          y_verif.copy(),\
+                          k)
+
 
 print('That took {} seconds'.format(time.time() - starttime))

@@ -40,17 +40,6 @@ ga,knn, 7 , 33.624256145908205
 ga,dknn, 7 , 39.39213670991319
 ga,knn, 13 , 34.33766224130609
 ga,dknn, 13 , 35.78889957003802
-Process Process-14:
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
-    self.run()
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
-    self._target(*self._args, **self._kwargs)
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 42, in gbest_pso_run
-    neighbors = reg.find_all_neighbors(scaled_x_verif)
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38, in find_all_neighbors
-    nbrs_dist.append(LA.norm(x - self.X[i])) #Euclidean dist
-AttributeError: type object 'range' has no attribute 'norm'
 gbest-pso,knn, 9 , 16.70094520552889
 gbest-pso,dknn, 9 , 13.123919543245645
 gbest-pso,knn, 7 , 13.760127471014984
@@ -63,19 +52,6 @@ gbest-pso,knn, 11 , 30.534940642980693
 gbest-pso,dknn, 11 , 28.67368337662157
 lbest-pso,knn, 9 , 19.469192436938602
 lbest-pso,dknn, 9 , 15.964455828869902
-Fatal Python error: GC object already tracked
-
-Current thread 0x00007fcaa93fe740 (most recent call first):
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38 in find_all_neighbors
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 162 in lbest_pso_run
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 93 in run
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 258 in _bootstrap
-  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 73 in _launch
-  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19 in __init__
-  File "/usr/lib/python3.6/multiprocessing/context.py", line 277 in _Popen
-  File "/usr/lib/python3.6/multiprocessing/context.py", line 223 in _Popen
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 105 in start
-  File "master_process.py", line 130 in <module>
 lbest-pso,knn, 3 , 15.550032930232558
 lbest-pso,dknn, 3 , 14.231336987026557
 lbest-pso,knn, 13 , 22.963178423578203
@@ -204,19 +180,6 @@ gbest-pso,knn, 7 , 10.177994064682354
 gbest-pso,dknn, 7 , 5.9587594902954475
 gbest-pso,knn, 15 , 20.707833876795885
 gbest-pso,dknn, 15 , 14.27764799104827
-Fatal Python error: GC object already tracked
-
-Current thread 0x00007fcaa93fe740 (most recent call first):
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38 in find_all_neighbors
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 120 in lbest_pso_run
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 93 in run
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 258 in _bootstrap
-  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 73 in _launch
-  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19 in __init__
-  File "/usr/lib/python3.6/multiprocessing/context.py", line 277 in _Popen
-  File "/usr/lib/python3.6/multiprocessing/context.py", line 223 in _Popen
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 105 in start
-  File "master_process.py", line 130 in <module>
 lbest-pso,knn, 9 , 13.465232722037646
 lbest-pso,dknn, 9 , 12.065438007717548
 lbest-pso,knn, 5 , 16.806041134086378
@@ -341,22 +304,6 @@ ga,knn, 15 , 31.64022717799925
 ga,dknn, 15 , 33.55624513671975
 gbest-pso,knn, 9 , 19.108961691317017
 gbest-pso,dknn, 9 , 14.83401251431607
-munmap_chunk(): invalid pointer
-Fatal Python error: GC object already tracked
-
-Current thread 0x00007fcaa93fe740 (most recent call first):
-  File "/export/home/basak/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 2462 in norm
-  File "<__array_function__ internals>", line 6 in norm
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38 in find_all_neighbors
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 69 in gbest_pso_run
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 93 in run
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 258 in _bootstrap
-  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 73 in _launch
-  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19 in __init__
-  File "/usr/lib/python3.6/multiprocessing/context.py", line 277 in _Popen
-  File "/usr/lib/python3.6/multiprocessing/context.py", line 223 in _Popen
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 105 in start
-  File "master_process.py", line 108 in <module>
 gbest-pso,knn, 7 , 20.027843749677952
 gbest-pso,dknn, 7 , 12.045747383281704
 gbest-pso,knn, 3 , 11.456926024363243
@@ -483,22 +430,6 @@ ga,knn, 3 , 42.029451443706165
 ga,dknn, 3 , 43.8179878737702
 ga,knn, 7 , 35.26475828829075
 ga,dknn, 7 , 38.33096404253977
-double free or corruption (out)
-Fatal Python error: GC object already tracked
-
-Current thread 0x00007fcaa93fe740 (most recent call first):
-  File "/export/home/basak/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 2462 in norm
-  File "<__array_function__ internals>", line 6 in norm
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38 in find_all_neighbors
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 69 in gbest_pso_run
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 93 in run
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 258 in _bootstrap
-  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 73 in _launch
-  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19 in __init__
-  File "/usr/lib/python3.6/multiprocessing/context.py", line 277 in _Popen
-  File "/usr/lib/python3.6/multiprocessing/context.py", line 223 in _Popen
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 105 in start
-  File "master_process.py", line 108 in <module>
 gbest-pso,knn, 3 , 14.221215377630127
 gbest-pso,dknn, 3 , 12.380438950540643
 gbest-pso,knn, 11 , 14.902855916257106
@@ -509,20 +440,6 @@ gbest-pso,knn, 15 , 19.955009574278336
 gbest-pso,dknn, 15 , 12.136339071805658
 gbest-pso,knn, 9 , 31.06782504199991
 gbest-pso,dknn, 9 , 18.659692461409
-Process Process-143:
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
-    self.run()
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
-    self._target(*self._args, **self._kwargs)
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 162, in lbest_pso_run
-    neighbors = reg.find_all_neighbors(scaled_x_verif)
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38, in find_all_neighbors
-    nbrs_dist.append(LA.norm(x - self.X[i])) #Euclidean dist
-  File "<__array_function__ internals>", line 6, in norm
-  File "/export/home/basak/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 2472, in norm
-    x = x.ravel(order='K')
-TypeError: order not understood
 lbest-pso,knn, 13 , 23.170916387741073
 lbest-pso,dknn, 13 , 17.911597504423735
 lbest-pso,knn, 9 , 22.907509809072636
@@ -588,19 +505,6 @@ gbest-pso,knn, 5 , 14.246724612093018
 gbest-pso,dknn, 5 , 11.575425332372882
 gbest-pso,knn, 7 , 14.971179572920196
 gbest-pso,dknn, 7 , 11.81886355496695
-Fatal Python error: GC object already tracked
-
-Current thread 0x00007fcaa93fe740 (most recent call first):
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38 in find_all_neighbors
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 162 in lbest_pso_run
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 93 in run
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 258 in _bootstrap
-  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 73 in _launch
-  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19 in __init__
-  File "/usr/lib/python3.6/multiprocessing/context.py", line 277 in _Popen
-  File "/usr/lib/python3.6/multiprocessing/context.py", line 223 in _Popen
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 105 in start
-  File "master_process.py", line 130 in <module>
 lbest-pso,knn, 9 , 17.463376097945115
 lbest-pso,dknn, 9 , 13.706177582405354
 lbest-pso,knn, 3 , 10.084805806201553
@@ -734,25 +638,9 @@ lbest-pso,knn, 7 , 18.611325985897338
 lbest-pso,dknn, 7 , 11.382550364222663
 lbest-pso,knn, 11 , 15.960442548117843
 lbest-pso,dknn, 11 , 13.367991522229818
-Fatal Python error: GC object already tracked
-
-Current thread 0x00007fcaa93fe740 (most recent call first):
-  File "/export/home/basak/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 2462 in norm
-  File "<__array_function__ internals>", line 6 in norm
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/knn.py", line 38 in find_all_neighbors
-  File "/export/home/basak/mst-final-run/part_2_mmntv/regression/airfoil/pso_run.py", line 162 in lbest_pso_run
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 93 in run
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 258 in _bootstrap
-  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 73 in _launch
-  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19 in __init__
-  File "/usr/lib/python3.6/multiprocessing/context.py", line 277 in _Popen
-  File "/usr/lib/python3.6/multiprocessing/context.py", line 223 in _Popen
-  File "/usr/lib/python3.6/multiprocessing/process.py", line 105 in start
-  File "master_process.py", line 130 in <module>
 lbest-pso,knn, 9 , 13.310650508674781
 lbest-pso,dknn, 9 , 10.894219129368643
 lbest-pso,knn, 15 , 27.30826622179401
 lbest-pso,dknn, 15 , 29.24904880660144
 lbest-pso,knn, 3 , 9.711796944629016
 lbest-pso,dknn, 3 , 7.457320949815437
-That took 140486.50925517082 second
