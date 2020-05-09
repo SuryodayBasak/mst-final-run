@@ -6,8 +6,10 @@ from knn import KNNRegressor, DwKNNRegressor, KNNClassifier, DwKNNClassifier
 from sklearn.model_selection import train_test_split
 from ga import GeneticAlgorithm
 from sklearn.metrics import accuracy_score as accuracy
-from ga_run import ga_run
-from pso_run import gbest_pso_run, lbest_pso_run
+from ga_run_ent import ga_run_ent
+from ga_run_std import ga_run_std
+from pso_run_ent import gbest_pso_run_ent, lbest_pso_run_ent
+from pso_run_std import gbest_pso_run_std, lbest_pso_run_std
 from sklearn.decomposition import PCA
 
 # Load data.
